@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import styles from './MainPage.module.css';
+
 function MainPage() {
     const [post, setPost] = useState(null);
     const fetchDate = async () => {
@@ -20,17 +22,23 @@ function MainPage() {
     fetchDate();
 
 
-    return <div>
-        <div className="mainPage">
-            <h1>Это MainPage</h1>
+    return <>
+        <div className={styles.mainPage}>
+            <h1 className='headTitle'>Это MainPage</h1>
             {post && (
                 <article>
                     <h2>{post.title}</h2>
                     <p>{post.body}</p>
                 </article>
             )}
+            <ul>
+                <li>это</li>
+                <li>добавленный</li>
+                <li>список</li>
+            </ul>
         </div>
-    </div>
+
+    </>
 }
 
 export default MainPage;
