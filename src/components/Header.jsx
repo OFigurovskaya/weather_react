@@ -1,15 +1,15 @@
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 function Header() {
 
       return (
-        <div>
-          <ul className={styles.list}>
-            <li>head</li>
-            <li>about</li>
-            <li>contacts</li>
-            <li>today</li>
-            <li>tomorrow</li>
+        <div className="header">
+          <ul className={styles.header__list}>
+            <li className="header__item">head</li>
+            <li className="header__item">about</li>
+            <li className="header__item">contacts</li>
+            <li className="header__item">today</li>
+            <li className="header__item">tomorrow</li>
           </ul>
         </div>
       );

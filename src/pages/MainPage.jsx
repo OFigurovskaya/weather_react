@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './MainPage.module.css';
+import styles from './MainPage.module.scss';
 
 function MainPage() {
     const [post, setPost] = useState(null);
@@ -24,17 +24,17 @@ function MainPage() {
 
     return <>
         <div className={styles.mainPage}>
-            <h1 className='headTitle'>Это MainPage</h1>
+            <h1 className={styles.headTitle}>Это MainPage</h1>
             {post && (
-                <article>
-                    <h2>{post.title}</h2>
-                    <p>{post.body}</p>
+                <article className={styles.block}>
+                    <h2 className={styles.title}>{post.title}</h2>
+                    <p className={styles.post}>{post.body}</p>
                 </article>
             )}
-            <ul>
-                <li>это</li>
-                <li>добавленный</li>
-                <li>список</li>
+            <ul className={styles.list}>
+                <li className={styles.item}>это</li>
+                <li className={styles.item}>добавленный</li>
+                <li className={styles.item}>список</li>
             </ul>
         </div>
 
